@@ -25,6 +25,11 @@ export default function App() {
 
   const formHandler = (event) => {
     event.preventDefault();
+
+    if (interests.length === 0) {
+      alert("Please Select one or more interest.");
+    }
+
     if (name && email && subscription && updates) {
       setData(true);
     }
